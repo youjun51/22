@@ -205,6 +205,7 @@
   </div>
 
   <!-- ------------------------------------------------>
+  
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <h4>前往你的 Demo 網頁</h4>
@@ -222,18 +223,15 @@
       </div>
   </div>
 
-  <!-- ------------------------------------------------> 
-  <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <h4>心得報告</h4>
-    </div>
-  </div>
   
-<!-- ------------------------------------------------>
+  <!-- ------------------------------------------------>
+  
   <div class="row hw12">
     <div class="col-md-12 twenty">
+      心得<br>
       
     </div>
+  </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
@@ -248,37 +246,37 @@
 
         <tr>
           <td rowspan="16" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked="checked"></td>
           <td id='m1'>2</td>
           <td>Simple baseline-1 - 以histogram呈現每個年份出生的人數</td>
         </tr>
 
          <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked="checked"></td>
           <td id='m2'>2</td>
           <td>Simple baseline-2 - 可調整margin, fill color, tip</td>
         </tr>
         
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked=></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked="checked"></td>
           <td id='m3'>2</td>
           <td>Medium baseline-1 - 以bar chart呈現每個年份出生的人數</td>
         </tr>
 
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked=></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked="checked"></td>
           <td id='m4'>2</td>
           <td>Medium baseline-2 - 可調整margin, fill color, tip </td>
         </tr>
         
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" ></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked"></td>
           <td id='m5'>1</td>
           <td>Strong baseline-1 - 以bar chart呈現每個星座的人數 </td>
         </tr>
 
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" ></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked"></td>
           <td id='m6'>1</td>
           <td>Strong baseline-2 - 以histogram呈現每個星座的人數 </td>
         </tr>
@@ -297,8 +295,8 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
        
-      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF
-  src="https://observablehq.com/embed/df34677961e1dc38?cell=*"></iframe>
+      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
+      src="https://observablehq.com/embed/df34677961e1dc38?cell=*"></iframe>
       
     </div>
   </div>
@@ -313,8 +311,8 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       
-      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF
-  src="https://observablehq.com/embed/1821ba0818edca04?cell=*"></iframe>
+      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
+      src="https://observablehq.com/embed/1821ba0818edca04?cell=*"></iframe>
       
     </div>
   </div>
@@ -328,67 +326,67 @@
   
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      
-      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF
+
+       <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
   ></iframe>
       
     </div>
   </div>
 
   <!-- ------------------------------------------------>
-
+  
   <!-- ------------------------------------------------>
 
 
-  <script>
-    $(function() {
-      var f = function() {
-        $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
-      };
-      $('input').change(f).trigger('change');
-    });
+<script>
+  $(function() {
+    var f = function() {
+      $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
+    };
+    $('input').change(f).trigger('change');
+  });
+
+  d3.select("#myCheckbox1").on("change",update);
+  d3.select("#myCheckbox2").on("change",update);
+  d3.select("#myCheckbox3").on("change",update);
+  d3.select("#myCheckbox4").on("change",update);
+  d3.select("#myCheckbox5").on("change",update);
+  d3.select("#myCheckbox6").on("change",update);
+  d3.select("#myCheckbox7").on("change",update);
+
+  update();
   
-    d3.select("#myCheckbox1").on("change",update);
-    d3.select("#myCheckbox2").on("change",update);
-    d3.select("#myCheckbox3").on("change",update);
-    d3.select("#myCheckbox4").on("change",update);
-    d3.select("#myCheckbox5").on("change",update);
-    d3.select("#myCheckbox6").on("change",update);
-    d3.select("#myCheckbox7").on("change",update);
-  
-    update();
-    
-    function update(){
-  
-      var score = 0;
-  
-      if (d3.select("#myCheckbox1").property("checked")){
-        score += parseInt(d3.select('#m1').html());
-      }
-  
-      if (d3.select("#myCheckbox2").property("checked")){
-        score += parseInt(d3.select('#m2').html());   
-      }
-  
-      if (d3.select("#myCheckbox3").property("checked")){
-        score += parseInt(d3.select('#m3').html());   
-      }
-  
-      if (d3.select("#myCheckbox4").property("checked")){
-        score += parseInt(d3.select('#m4').html());
-      }
-  
-      if (d3.select("#myCheckbox5").property("checked")){
-        score += parseInt(d3.select('#m5').html());   
-      }
-  
-      if (d3.select("#myCheckbox6").property("checked")){
-        score += parseInt(d3.select('#m6').html());   
-      }
-  
-      d3.select("#myTotal").html(score);    
+  function update(){
+
+    var score = 0;
+
+    if (d3.select("#myCheckbox1").property("checked")){
+      score += parseInt(d3.select('#m1').html());
     }
-  </script>
+
+    if (d3.select("#myCheckbox2").property("checked")){
+      score += parseInt(d3.select('#m2').html());   
+    }
+
+    if (d3.select("#myCheckbox3").property("checked")){
+      score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
+    }
+
+    d3.select("#myTotal").html(score);    
+  }
+</script>
 
 </body>
 </html>
