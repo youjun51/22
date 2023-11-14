@@ -1,0 +1,14 @@
+{
+  "name": "1821ba0818edca04",
+  "main": "1821ba0818edca04@18.js",
+  "version": "18.0.0",
+  "homepage": "https://observablehq.com/d/1821ba0818edca04",
+  "author": {
+    "name": "YOUJUN's Workspace",
+    "url": "https://observablehq.com/@youjun-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
