@@ -1,0 +1,14 @@
+{
+  "name": "df34677961e1dc38",
+  "main": "df34677961e1dc38@11.js",
+  "version": "11.0.0",
+  "homepage": "https://observablehq.com/d/df34677961e1dc38",
+  "author": {
+    "name": "YOUJUN's Workspace",
+    "url": "https://observablehq.com/@youjun-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
