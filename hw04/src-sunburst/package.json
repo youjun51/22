@@ -1,0 +1,14 @@
+{
+  "name": "850c5f6932a386df",
+  "main": "850c5f6932a386df@80.js",
+  "version": "80.0.0",
+  "homepage": "https://observablehq.com/d/850c5f6932a386df",
+  "author": {
+    "name": "YOUJUN's Workspace",
+    "url": "https://observablehq.com/@youjun-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
